@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+
+h2 {
+    color: darkgreen;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Tạo kiểu cho thanh điều hướng */
+nav {
+    background-color: darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 20px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: lightblue;
+    color: darkblue;
+    transform: scale(1.15) translateY(-3px);
+}
+
+/* Tạo kiểu cho tất cả hình ảnh */
+img {
+    border: 5px solid darkblue;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+/* Sử dụng CSS Grid cho bộ sưu tập ảnh */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-box {
+    text-align: center;
+}
+/* Bước 9 - Sử dụng nth-child */
+
+/* Hình ảnh thứ nhất, thứ ba, thứ năm */
+.image-box:nth-child(odd) img {
+    border-radius: 30px;
+}
+
+/* Hình ảnh thứ hai, thứ tư */
+.image-box:nth-child(even) img {
+    border-radius: 5px;
+}
